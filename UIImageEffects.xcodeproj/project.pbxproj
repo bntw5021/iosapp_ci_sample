@@ -272,12 +272,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daisuke Watanabe (P3VXDKCSZV)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daisuke Watanabe (4J4BN4PUNL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e587c7a1-7766-47af-835d-83395d1306aa";
+				PROVISIONING_PROFILE = "56b6147a-62f5-418b-baa3-f188e7cd57a2";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,12 +288,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Daisuke Watanabe (P3VXDKCSZV)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daisuke Watanabe (4J4BN4PUNL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e587c7a1-7766-47af-835d-83395d1306aa";
+				PROVISIONING_PROFILE = "56b6147a-62f5-418b-baa3-f188e7cd57a2";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
