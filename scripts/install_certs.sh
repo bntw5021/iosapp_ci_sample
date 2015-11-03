@@ -1,13 +1,11 @@
 #!/bin/sh
 
 # 証明書・Provisioning Profileを復号
-openssl aes-256-cbc -k $DECORD_CERTS -in scripts/profile/UIImageEffects_AppStore.mobileprovision.enc -d -a -out scripts/profile/UIImageEffects_AppStore.mobileprovision
+openssl aes-256-cbc -k $DECORD_CERTS -in scripts/profiles/UIImageEffects_AppStore.mobileprovision.enc -d -a -out scripts/profiles/UIImageEffects_AppStore.mobileprovision
 openssl aes-256-cbc -k $DECORD_CERTS -in scripts/certs/cert.cer.enc -d -a -out scripts/certs/cert.cer
 openssl aes-256-cbc -k $DECORD_CERTS -in scripts/certs/cert.p12.enc -d -a -out scripts/certs/cert.p12
 
 # VM上にキーチェーンを作成
-# なぜこんな手順を踏むかは↓を参照
-# http://docs.travis-ci.com/user/common-build-problems/#Mac%3A-Code-Signing-Errors
 security create-keychain -p travis ios-build.keychain
 security default-keychain -s ios-build.keychain
 security unlock-keychain -p travis ios-build.keychain
