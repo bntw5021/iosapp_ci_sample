@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CC7D101BE8ECD800692ED1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CC7D0E1BE8ECD800692ED1 /* Fabric.framework */; };
+		03CC7D111BE8ECD800692ED1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CC7D0F1BE8ECD800692ED1 /* Crashlytics.framework */; };
 		28DD4759175C2F84007B658A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD4758175C2F84007B658A /* Foundation.framework */; };
 		28DD475B175C2F84007B658A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD475A175C2F84007B658A /* CoreGraphics.framework */; };
 		28DD475D175C2F84007B658A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD475C175C2F84007B658A /* UIKit.framework */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03CC7D0E1BE8ECD800692ED1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		03CC7D0F1BE8ECD800692ED1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		28DD4755175C2F84007B658A /* UIImageEffects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageEffects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DD4758175C2F84007B658A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28DD475A175C2F84007B658A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,8 +51,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00FDE5E17B41EC80063BC71 /* Accelerate.framework in Frameworks */,
+				03CC7D101BE8ECD800692ED1 /* Fabric.framework in Frameworks */,
 				28DD475B175C2F84007B658A /* CoreGraphics.framework in Frameworks */,
 				28DD475D175C2F84007B658A /* UIKit.framework in Frameworks */,
+				03CC7D111BE8ECD800692ED1 /* Crashlytics.framework in Frameworks */,
 				28DD4759175C2F84007B658A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +83,8 @@
 		28DD4757175C2F84007B658A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03CC7D0E1BE8ECD800692ED1 /* Fabric.framework */,
+				03CC7D0F1BE8ECD800692ED1 /* Crashlytics.framework */,
 				D00FDE5D17B41EC80063BC71 /* Accelerate.framework */,
 				28DD4758175C2F84007B658A /* Foundation.framework */,
 				28DD475A175C2F84007B658A /* CoreGraphics.framework */,
@@ -122,6 +130,7 @@
 				28DD4751175C2F84007B658A /* Sources */,
 				28DD4752175C2F84007B658A /* Frameworks */,
 				28DD4753175C2F84007B658A /* Resources */,
+				03CC7D0D1BE8EC6400692ED1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -177,6 +186,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03CC7D0D1BE8EC6400692ED1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 724c3f1199f04a73fd6f6e1fdf239e5366c4e714 1e7d216ca7cf424c8d192393406f7480fa2ac596fc516abf6f31ab6189a403c9";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		28DD4751175C2F84007B658A /* Sources */ = {
@@ -273,6 +298,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Daisuke Watanabe (4J4BN4PUNL)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
@@ -289,6 +318,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Daisuke Watanabe (4J4BN4PUNL)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
