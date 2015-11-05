@@ -4,4 +4,5 @@
   -ipaPath ./build/UIImageEffects.ipa \
   -emails watanabe1205@gmail.com﻿ \
   -groupAliases TestGroup \
-  -notifications YES
+  -notifications YES \
+  -debug YES
