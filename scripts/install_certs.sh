@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 証明書・Provisioning Profileを復号
-openssl aes-256-cbc -k $DECORD_CERTS -in scripts/profiles/UIImageEffects_AppStore.mobileprovision.enc -d -a -out scripts/profiles/UIImageEffects_AppStore.mobileprovision
+openssl aes-256-cbc -k $DECORD_CERTS -in scripts/profiles/UIImageEffects_Ad_Hoc.mobileprovision.enc -d -a -out scripts/profiles/UIImageEffects_Ad_Hoc.mobileprovision
 openssl aes-256-cbc -k $DECORD_CERTS -in scripts/certs/cert.cer.enc -d -a -out scripts/certs/cert.cer
 openssl aes-256-cbc -k $DECORD_CERTS -in scripts/certs/cert.p12.enc -d -a -out scripts/certs/cert.p12
 
@@ -18,4 +18,4 @@ security import ./scripts/certs/cert.p12 -k ~/Library/Keychains/ios-build.keycha
 
 # Provisioning Profileを保存する
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp "./scripts/profiles/UIImageEffects_AppStore.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/profiles/UIImageEffects_Ad_Hoc.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/

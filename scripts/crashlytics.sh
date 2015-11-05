@@ -2,5 +2,6 @@
 
 ./Crashlytics.framework/submit $API_KEY $BUILD_SECRET \
   -ipaPath ./build/UIImageEffects.ipa \
-  -notifications YES \
-  -debug YES
+  -emails watanabe1205@gmail.com﻿ \
+  -groupAliases TestGroup \
+  -notifications YES
