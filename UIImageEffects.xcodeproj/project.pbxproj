@@ -306,7 +306,7 @@
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56b6147a-62f5-418b-baa3-f188e7cd57a2";
+				PROVISIONING_PROFILE = "e587c7a1-7766-47af-835d-83395d1306aa";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -326,7 +326,7 @@
 				GCC_PREFIX_HEADER = "UIImageEffects/UIImageEffects-Prefix.pch";
 				INFOPLIST_FILE = "UIImageEffects/UIImageEffects-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56b6147a-62f5-418b-baa3-f188e7cd57a2";
+				PROVISIONING_PROFILE = "e587c7a1-7766-47af-835d-83395d1306aa";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
