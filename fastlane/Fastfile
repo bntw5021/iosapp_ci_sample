@@ -40,8 +40,17 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     # snapshot
-    sigh
-    gym # Build your app - more options available
+    sigh(
+      adhoc: true
+    )
+
+    ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
+
+    gym(
+      clean: true,
+      workspace: 'UIImageEffects.xcodeproj/project.xcworkspace',
+      scheme: 'UIImageEffects'
+    )
     pilot
 
     # sh "your_script.sh"
@@ -53,8 +62,17 @@ platform :ios do
     # snapshot
   desc "** Full Markdown** Support: `code`"
     sigh
-    gym # Build your app - more options available
-    deliver(force: true)
+
+    ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
+    
+    gym(
+      clean: true,
+      workspace: 'UIImageEffects.xcodeproj/project.xcworkspace',
+      scheme: 'UIImageEffects'
+    )
+    deliver(
+      force: true
+    )
     # frameit
   end
 
