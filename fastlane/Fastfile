@@ -22,75 +22,73 @@ default_platform :ios
 
 
 platform :ios do
-  before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    
-    
-    # increment_build_number
 
-    # xctool # run the tests of your app
+  before_all do
   end
 
   desc "Runs all the tests"
   lane :test do
-    # snapshot
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    # snapshot
     sigh(
       adhoc: true
     )
 
     ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
 
+    xcodebuild_args = {
+      PROVISIONING_PROFILE: lane_context[SharedValues::SIGH_UDID],
+      PRODUCT_BUNDLE_IDENTIFIER: "d.UIImageEffects"
+    }
+
+    xcodebuild_args = xcodebuild_args.map do |k,v|
+      "#{k.to_s.shellescape}=#{v.shellescape}"
+    end.join ' '
+
     gym(
       clean: true,
       workspace: 'UIImageEffects.xcodeproj/project.xcworkspace',
       scheme: 'UIImageEffects'
     )
+
     pilot
 
-    # sh "your_script.sh"
-    # You can also use other beta testing services here
   end
 
   desc "Deploy a new version to the App Store"
   lane :deploy do
-    # snapshot
-  desc "** Full Markdown** Support: `code`"
     sigh
 
     ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
-    
+
+    xcodebuild_args = {
+      PROVISIONING_PROFILE: lane_context[SharedValues::SIGH_UDID],
+      PRODUCT_BUNDLE_IDENTIFIER: "d.UIImageEffects"
+    }
+
+    xcodebuild_args = xcodebuild_args.map do |k,v|
+      "#{k.to_s.shellescape}=#{v.shellescape}"
+    end.join ' '
+
     gym(
       clean: true,
       workspace: 'UIImageEffects.xcodeproj/project.xcworkspace',
       scheme: 'UIImageEffects'
     )
+
     deliver(
       force: true
     )
-    # frameit
+
   end
 
-  # You can define as many lanes as you want
-
   after_all do |lane|
-    # This block is called, only if the executed lane was successful
-    
-    # slack(
-    #   message: "Successfully deployed new App Update."
-    # )
   end
 
   error do |lane, exception|
-    # slack(
-    #   message: exception.message,
-    #   success: false
-    # )
   end
 end
 
