@@ -24,3 +24,6 @@ after_script:
 
 after_success:
   #- "./scripts/crashlytics.sh"
+
+notifications:
+  
