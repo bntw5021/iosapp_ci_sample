@@ -3,6 +3,7 @@ cache: bundler
 
 before_script:
   - bundle install
+  - xcode-select --install
 
 script:
   - bundle exec fastlane beta
