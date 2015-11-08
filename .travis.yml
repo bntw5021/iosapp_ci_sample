@@ -9,6 +9,7 @@ before_script:
   - bundle install
   - ./scripts/before_script.sh
   - gem environment
+  - gem which fastlane
 
 script:
   - ~/.rvm/gems/ruby-2.0.0-p481/bin/fastlane beta
