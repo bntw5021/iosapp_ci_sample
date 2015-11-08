@@ -11,7 +11,7 @@ before_script:
   - gem environment
 
 script:
-  - ~/.rbenv/versions/2.1.1/bin/fastlane beta
+  - ~/.rvm/gems/ruby-2.0.0-p481/bin/fastlane beta
 
 after_script:
 
