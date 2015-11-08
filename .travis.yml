@@ -10,7 +10,7 @@ before_script:
   - ./scripts/before_script.sh
 
 script:
-  - fastlane beta
+  - ~/.rbenv/shims/fastlane beta
 
 after_script:
 
