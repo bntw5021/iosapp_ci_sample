@@ -8,6 +8,7 @@ env:
 before_script:
   - bundle install
   - ./scripts/before_script.sh
+  - gem environment
 
 script:
   - ~/.rbenv/versions/2.1.1/bin/fastlane beta
