@@ -12,14 +12,11 @@ platform :ios do
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
   lane :beta do
 
     sigh(
       adhoc: true
     )
-
-    ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
 
     xcodebuild_args = {
       PROVISIONING_PROFILE: lane_context[SharedValues::SIGH_UDID],
@@ -44,8 +41,6 @@ platform :ios do
   lane :deploy do
 
     sigh
-
-    ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
 
     xcodebuild_args = {
       PROVISIONING_PROFILE: lane_context[SharedValues::SIGH_UDID],
