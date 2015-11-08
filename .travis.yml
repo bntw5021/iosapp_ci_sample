@@ -6,7 +6,7 @@ before_script:
   - xcode-select --install
 
 script:
-  - bundle exec fastlane beta
+  - bundle exec fastlane deploy
 
 after_script:
 
