@@ -1,4 +1,5 @@
 language: objective-c
+cache: bundler
 
 #env:
   #global:
@@ -12,7 +13,7 @@ language: objective-c
     #- secure: p2PYUaSwSjE2FK3vXXjX4YTgnFUdSvTwmrh0iM9c8fhQJWnt8HwHQIgXNuteL81iM9T0mKTWTI+CZ9LIwCchkXI1DA883yDj1dBWdh6DOgkc5gAYOwCwr1QrYBI96SaiTDZ6UcAQ7rUgh486/dnioel0/KCFvidF8XGDIMhSUQSkJi6xVw/Qv3m8fGBtoLde4VhgfRzy20lH+PKWz1As0QooUCwj0xTTPJK/ewYje86cZ35lBCneo2gl3s0801gs4Iaq6hC3gXDx5gOsYQkQiuLnAIxkeC8WXb/q0Q8CmgamIEmTM/BiSsbL2LHm3Cix+B5WbRb3ljIVubmM8HMQXilveGrvgwACXoidjICEIs3odf3B9sYrO7V50LVpKT9RMtjMhqp8FXqmigflWQJCIiCkJHzqN7yD5zRDU1Msk31ur5YlatKNWVdopuizTM5xcqvJv+Es92ymdMTfgdmZUzpPwGcj4oZLRp0dmlmJjZPHWF9kX7oG/OKoabZTzPNm/rauU6T5lRISZE31094p7z172/17upI9F/cTco8fFowSwleNBm8tU2uzgIKYzZgCcPg+dF8WzO7xxJHJRxjEnYeSQoGfW/aRgmiZMmKbUmNB7Lnk7m2gLdqj/WFiK1mOsps7Lr/9kv/wA+yFAdq29jc9h5+zn7FbLS8lfugQvEE=
 
 before_script:
-  - gem install fastlane
+  - bundle install
   #- "./scripts/install_certs.sh"
 
 script:
