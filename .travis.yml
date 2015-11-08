@@ -1,13 +1,8 @@
 language: objective-c
 cache: bundler
 
-env:
-  global:
-    secure: kgTpnRppLLdIzK3nh/GlAkZroHDP374peaJXaHiewSldipKgydwrMNHqweF+9n8uiWYf1VkAu0vUoJ1wqpj0pjgLmYBsg3g/I4shdaMl4ogynfuMRGFRYTOmpSCSVGMk7zL0kB7AaGV3UVWE+8D4lVr0K2Kt0L2OfBKDBczmajy8Ws8yl07tpPUBG/kK98EeuzrC2AznbFWafoAzJHHp6dBb8OWFUMgkHItLYb+Smuvk/WVZboTQCg5RC6osVm8ggCB2TLTlJs3ACFZaJbDf1+zxH2kIhRwNaZcfVDuesZcqyM4qmv2iw5Dmi0Ik0vks3vC5vvCkLka4TtgCnBLqB/AaPGbMKv/0PJ6c/tplOHCO7XkNh/beli0WCLvAmKy4/vQmR79QY77kYmrfNSHmpQsiPRcZ1veJZgSbJyIJtvCDsir9a7Ovw3Jxr9hKiksv56izGZyOd0I9waLz7w3XV0QEmJEHnVGw8WzHthciNm7WLnyO+aJ7tu0gK+fUuXrpvnepjxo6n9rgA/0aDgfo+Y3oy3um8M9Vs1xrWKzYNueViWSrFNeX/JO3fxZnfcOK0drpbage/TGNbHdCJZadxPF5RBR8gnVQF8zsnM/dYuyVIslz7mr/VvVey5mMwO0npFbu3wcS2DcPfQThsfRYfzd3b6WfbbjbGV+Jp/An+Kc=
-
 before_script:
   - bundle install
-  - ./scripts/before_script.sh
 
 script:
   - bundle exec fastlane beta
