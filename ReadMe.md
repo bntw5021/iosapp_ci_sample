@@ -8,3 +8,4 @@ iOSアプリ開発でCIを実現する方法を確認するためのサンプル
 - fastlane
 
 iOSアプリはAppleによるサンプルアプリ「UIImageEffects」を使わせていただきました。
+https://developer.apple.com/library/ios/samplecode/UIImageEffects/Introduction/Intro.html
